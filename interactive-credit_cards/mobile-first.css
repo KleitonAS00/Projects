@@ -38,8 +38,9 @@ body {
 }
 
 .center {
-    margin: 0 auto;
+    margin: auto;
     width: 350px;
+    
 }
 
 .template-cards {
@@ -47,7 +48,7 @@ body {
     position: absolute;
     top: 0;
 }
-
+/*
 #card-back {
     position: absolute;
     background-image: url(images/bg-card-back.png);
@@ -58,17 +59,26 @@ body {
     right: -311px;
 }
 
+#card-back-content {
+    font-size: 0.6em;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    top: 60px;
+}
+
 #card-front {
     position: absolute;
     background-image: url(images/bg-card-front.png);
     width: 80vw;
-    height: 160px;
+    height: 180px;
     background-size: cover;
     background-repeat: no-repeat;
     top: 76px;
 }
 
 /*dentro do cartão da frente*/
+/*
 #card-front-content {
     margin: 0 auto;
     width: 85%;
