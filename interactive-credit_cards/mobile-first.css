@@ -44,9 +44,17 @@ body {
 }
 
 .template-cards {
-    margin-top: 30px;
-    position: absolute;
-    top: 0;
+    margin-top: -160px;
+}
+
+#card-back .card-one img{
+    width: 280px;
+    float: right; 
+}
+
+#card-front .card-two img {
+    width: 280px;
+    margin-top: -66px;
 }
 /*
 #card-back {
@@ -78,7 +86,7 @@ body {
 }
 
 /*dentro do cartão da frente*/
-/*
+
 #card-front-content {
     margin: 0 auto;
     width: 85%;
