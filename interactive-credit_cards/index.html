@@ -7,67 +7,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="mobile-first.css">
+  <link rel="stylesheet" href="style.css">
   
   <title>Interactive credit card</title>
 </head>
 
 <body>
   <main>
-    <!--Template cards-->
-    <div id="background">
-        
-    </div>
-
-    <div class="center">
-      <section class="template-cards">
-      
-        <div id="card-back">
-          <div class="card-one">
-            <img src="images/bg-card-back.png">
-          </div>
-          <div id="card-back-content">
-            000
-          </div>
-        </div>
-
-        <div id="card-front">
-          <div class="card-two">
+    <div class="container">
+      <div class="left_side">
+        <div id="cards">
+          <div id="front-card">
             <img src="images/bg-card-front.png" alt="">
-            <div id="card-front-content">
-              <div id="card-logo"><img src="images/card-logo.svg" alt=""></div>
-              <div id="card-number"><p>0000 0000 0000 0000</p></div>
-              <div id="name-date">
-                <p id="name">KLEITONPSON SILVA</p>
-                <p id="date">00/00</p>
+            <div id="card-container">
+              
+              <img class="card-logo" src="images/card-logo.svg" alt="card-logo">
+              
+              <h1 id="card-number">
+                0000 0000 0000 0000
+              </h1>
+              <div class="card-info">
+                <span id="name">
+                  Kleitonpson Silva
+                </span>
+                <span id="date">
+                  <span id="month">
+                    00
+                  </span>
+                  /
+                  <span id="year">
+                    00
+                  </span>
+                </span>
               </div>
-            
+            </div>
           </div>
+          <div id="back-card">
+            <img src="images/bg-card-back.png" alt="card-back">
+            <span id="cvc">
+              000
+            </span>
           </div>
         </div>
-      </section>
-      <!--Template form-->
-      <section class="">
-        <form></form>
-      </section>
-      <!--Cardholder Name
-      e.g. Jane Appleseed
-      Card Number
-      e.g. 1234 5678 9123 0000
-      Exp. Date (MM/YY)
-      MM
-      YY
-      CVC
-      e.g. 123-->
-      <!--button-->
-      <!--Confirm-->
-      <!-- Completed state start -->
-      <!--Thank you!
-      We've added your card details
-      Continue-->
+      </div>
+      <!--lado direito (formulário)-->
+      <div class="right-side">
+        <form>
+          <div class="grid-1">
+            <label for="input-name">Cardholder Name</label>
+            <input id="input-name" name="input-name" type="text" placeholder="e.g. Jane Appleseed" required>
+          </div>
+          <div class="grid-2">
+            <label for="input-number">Cardholder Card Number</label>
+            <input id="input-number" name="input-number" type="number" placeholder="e.g. 1234 5678 9123 0000" required oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)", minlength="16" maxlength="16">
+          </div>
+          <div class="card-information">
+            <div id="card-date">
+              <label for="card-date">Exp. Date (MM/YY)</label>
+              <div class="two-inp">
+                <div>
+                  <input id="input-month" name="exp-date" type="text" placeholder="MM" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)" minlength="2" maxlength="2">
+                </div>
+                <div>
+                  <input id="card-year" name="exp-date" type="text" placeholder="YY" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)" minlength="2" maxlength="2">
+                </div>
+              </div>
+            </div>
+            <div class="grid-4">
+              <label for="card-cvc">CVC</label>
+              <input type="number" placeholder="e.g. 123" id="card-cvc" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0,this.maxLength)" minlength="3" maxlength="3">
+            </div>
+          </div>
+          <button id="submit_btn" type="submit">Confirm</button>
+        </form>
+        <div class="thank hidden">
+          <img src="images/icon-complete.svg" alt="completed">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
     </div>
-    
   </main>
+  <script src="app.js"></script>
   <!--<div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
