@@ -1,0 +1,76 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+    --default-font:'Ubuntu', sans-serif;
+    --color1: #4725df;
+    --color2: #ececec;
+    --color3: #1f0d6d;
+    --color4: #808080;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e2eaff;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.container {
+    max-width: 380px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#top-img {
+    width: 100%;
+    height: 35vh;
+    background-image: url('images/illustration-hero.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#principal {
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+#content {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.details {
+    padding: 2em;
+}
+
+#title, h3 {
+    color: var(--color3);
+}
+
+#title, #description {
+    text-align: center;
+    
+    
+}
+
+#description {
+    line-height: 1.5em;
+}
