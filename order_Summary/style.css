@@ -40,8 +40,9 @@ body, html {
     align-items: center;
 }
 #content {
+    display: flex;
     border-radius: 15px;
-    display: none;
+    /*display: none;*/
 }
 
 
@@ -60,6 +61,7 @@ body, html {
     width: 410px;
     height: 92%;
     overflow: hidden;
+    
 }
 
 
@@ -155,5 +157,31 @@ body, html {
 
 #other-plans {
     max-width: 100%;
-    
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+#other-plans > .value-details {
+    margin: 20px auto 0;
+}
+
+.plan-layout {
+    display: flex;
+}
+
+#other-plans > #btn-payment-2 {
+    margin-top: 80px;
+    background-color: var(--color1);
+    padding: 0.8em;
+    cursor: pointer;
+    color: var(--color2);
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 15px 15px 1px #3c25a344;
+}
+
+.hidden {
+    display: none;
 }
