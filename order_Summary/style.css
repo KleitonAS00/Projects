@@ -4,7 +4,7 @@
 :root {
     --default-font:'Ubuntu', sans-serif;
     --color1: #4725df;
-    --color2: #ececec;
+    --color2: #f4f6fc;
     --color3: #1f0d6d;
     --color4: #808080;
 }
@@ -16,7 +16,7 @@
     font-family: var(--default-font);
 }
 
-body {
+body, html {
     width: 100vw;
     height: 100vh;
     background-color: #e2eaff;
@@ -24,41 +24,54 @@ body {
 
 .background {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url('images/pattern-background-desktop.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    background-size: contain;
+    background-position: top;
+    background-attachment: fixed;
 }
 
 .container {
-    max-width: 380px;
-    height: 100%;
-    margin: 0 auto;
+    max-width: 410px;
+    height: 100vh;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
 }
+#content {
+    border-radius: 15px;
+    display: none;
+}
+
 
 #top-img {
     width: 100%;
-    height: 35vh;
+    height: 30vh;
     background-image: url('images/illustration-hero.svg');
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #principal {
     background-color: #fff;
-    border-radius: 10px;
-    
+    border-radius: 15px;
+    width: 410px;
+    height: 92%;
+    overflow: hidden;
 }
 
-#content {
-    overflow: hidden;
-    border-radius: 10px;
-}
 
 .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2em;
+}
+
+#title-description {
+    max-width: 85%;
 }
 
 #title, h3 {
@@ -67,10 +80,80 @@ body {
 
 #title, #description {
     text-align: center;
-    
-    
 }
 
 #description {
+    margin-top: 20px;
     line-height: 1.5em;
+    color: var(--color4);
+}
+
+.plan-details {
+    display: flex;
+}
+
+.icon-music {
+    margin-right: 15px;
+    max-height: 40px;
+}
+
+.value-details {
+    background-color: var(--color2);
+    width: 95%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    margin-top: 25px;
+}
+
+.change {
+    font-weight: 600;
+    color: #1f0d6d;
+    
+}
+
+.change:hover {
+    text-decoration: none;
+}
+
+.plan-container > h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+
+#btn-payment {
+    background-color: var(--color1);
+    padding: 0.8em;
+    margin-top: 25px;
+    cursor: pointer;
+    color: var(--color2);
+    font-weight: 600;
+    width: 95%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 15px 15px 1px #3c25a344;
+}
+
+#btn-payment:hover {
+    background-color: #6b4eee;
+}
+
+#cancel-order {
+    font-size: 0.8em;
+    color: var(--color4);
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+#cancel-order:hover {
+    color: #6b6b6b;
+}
+
+#other-plans {
+    max-width: 100%;
+    
 }
