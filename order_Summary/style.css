@@ -45,7 +45,6 @@ body, html {
     
 }
 
-
 #top-img {
     width: 100%;
     height: 30vh;
@@ -63,7 +62,6 @@ body, html {
     overflow: hidden;
     
 }
-
 
 .details {
     display: flex;
@@ -85,7 +83,7 @@ body, html {
 }
 
 #description {
-    margin-top: 20px;
+    margin: 20px 0;
     line-height: 1.5em;
     color: var(--color4);
 }
@@ -107,7 +105,6 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
-    margin-top: 25px;
 }
 
 .change {
@@ -158,11 +155,13 @@ body, html {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 15px;
+    padding: 2em;
+    align-items: center;
 }
 
-#other-plans > .value-details {
-    margin: 20px auto 0;
+#semester-plan {
+    margin-top: 25px;
+    
 }
 
 .plan-layout {
@@ -170,7 +169,8 @@ body, html {
 }
 
 #other-plans > #btn-payment-2 {
-    margin-top: 80px;
+    margin-top: 40px;
+    width: 100%;
     background-color: var(--color1);
     padding: 0.8em;
     cursor: pointer;
